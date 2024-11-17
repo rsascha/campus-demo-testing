@@ -9,5 +9,3 @@ async function connect() {
 }
 
 export const db = { connect };
-
-export default db;
