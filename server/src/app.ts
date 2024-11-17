@@ -1,18 +1,10 @@
 import express, { json } from "express";
-import { Category, Todo } from "@library/types";
+import { routerTodos } from "@server/routes";
 
 const app = express();
 
 app.use(json());
 
-app.get("/api/", (_, res) => {
-  const newTodo: Todo<Category> = {
-    id: Math.random(),
-    description: "description",
-    category: "hobby",
-    done: false,
-  };
-  res.json(newTodo);
-});
+app.use("/api/todos", routerTodos);
 
 export const viteNodeApp = app;
