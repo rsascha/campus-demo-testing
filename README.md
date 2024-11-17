@@ -325,3 +325,29 @@ describe("addTodo", () => {
   });
 });
 ```
+
+## Expect Helper Functions
+
+https://vitest.dev/api/expect.html
+
+The most common `expect` functions are:
+
+- `toBe` - compare values
+- `toEqual` - compare objects
+- `toBeGreaterThan` - compare numbers
+- `toContain` - check if an array contains a value
+- `toHaveBeenCalledWith` - check if a function was called with specific arguments
+- `toHaveBeenCalledTimes` - check how often a function was called
+
+## Exercise Unit Testing 1
+
+Task: Validate a Function
+
+Write a function `calculateTotal(items: { price: number, quantity: number }[]) : number` that calculates the total price of a list of items.
+
+Write unit tests using Vitest to cover the following cases:
+
+- An empty list
+- A list with one item
+- A list with multiple items
+- Invalid or edge cases (e.g., price = -1)
