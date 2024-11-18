@@ -355,3 +355,59 @@ Write unit tests using Vitest to cover the following cases:
 ## Exercise Unit Testing 2
 
 Increase Test Coverage to >= 90%
+
+## Vitest Client Setup
+
+React Testing Library
+
+React Testing Library is a popular testing library for React applications. It is designed to test components in a way that is similar to how users interact with them.
+
+- https://testing-library.com/docs/dom-testing-library/intro
+- https://testing-library.com/docs/react-testing-library/intro
+
+- install libraries
+- create a test file
+- run tests
+
+```sh
+npx vitest init browser # reac and follow instructions !
+```
+
+```json
+  "compilerOptions": {
+    "types": ["@vitest/browser/providers/playwright"]
+  }
+```
+
+To get the `vitest-example` code running, you need to move it to the `src` folder.
+
+## Sample Code
+
+```tsx
+type ButtonProps = {
+  text: string;
+  color?: string;
+};
+
+export function Button({ text }: ButtonProps) {
+  return <button>{text}</button>;
+}
+```
+
+```tsx
+import { render } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import { Button } from "./Button";
+
+describe("Button", () => {
+  it("should render a button", () => {
+    const result = render(<Button text="click me" />);
+    expect(result).toBeDefined();
+  });
+
+  it("should render a button and match snapshot", () => {
+    const result = render(<Button text="click me" />);
+    expect(result.container).toMatchSnapshot();
+  });
+});
+```

@@ -1,5 +1,5 @@
 import { useTodoList } from "@client/hooks";
-import { Category, Todo } from "@library/types";
+import { Todo } from "@library/types";
 
 export function TodoList() {
   const { todos, addTodo } = useTodoList();
@@ -7,7 +7,7 @@ export function TodoList() {
   async function handleAddTodo() {
     const response = await fetch("/api/");
     const data = await response.json();
-    const todo = data as unknown as Todo<Category>;
+    const todo = data as unknown as Todo;
     addTodo(todo);
   }
 
