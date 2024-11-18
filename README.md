@@ -351,3 +351,7 @@ Write unit tests using Vitest to cover the following cases:
 - A list with one item
 - A list with multiple items
 - Invalid or edge cases (e.g., price = -1)
+
+## Exercise Unit Testing 2
+
+Increase Test Coverage to >= 90%
