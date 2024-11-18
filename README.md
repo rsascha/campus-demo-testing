@@ -1,10 +1,10 @@
 # Component Testing & Unit Testing 🎯
 
-Learening goals:
+Learning goals:
 
+- Vitest
 - Unit Testing
 - Component Testing
-- Vitest
 - React Testing Library
 
 See:
