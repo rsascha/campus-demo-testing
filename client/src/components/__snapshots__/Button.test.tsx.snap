@@ -1,9 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Button > should render a button and match snapshot 1`] = `
-<div>
-  <button>
-    click me
-  </button>
-</div>
+<button
+  data-testid="my-button-component"
+>
+  click me
+</button>
 `;
